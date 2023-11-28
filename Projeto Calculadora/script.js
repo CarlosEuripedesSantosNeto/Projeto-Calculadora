@@ -26,6 +26,17 @@ function pegarOperador(operator) {
     }
 }
 
+document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    if (/[0-9]/.test(key)) {
+      pegarNum(key);
+    } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+      pegarOperador(key);
+    } else if (key === 'Enter') {
+      calcular();
+    }
+  });
+
 function calcular() {
     if (currentInput !== '' && currentOperator !== '' && previousInput !== '') {
         let result;
@@ -50,6 +61,13 @@ function calcular() {
         previousInput = '';
         displayValue = currentInput;
         updateDisplay();
+
+        document.addEventListener("click", function() {
+            this.style.backgroundColor = "#6c6c6c";
+            setTimeout(() => {
+                this.style.backgroundColor = "#6c6c6c"; 
+            }, 1000);
+        });
     }
 }
 
@@ -62,5 +80,6 @@ function limparDisplay() {
 }
 
 function updateDisplay() {
+    
     document.getElementById('display').value = displayValue !== '' ? displayValue : '0';
 }

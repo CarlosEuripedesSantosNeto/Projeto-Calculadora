@@ -11,9 +11,10 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #a4dbff;
+  background-image: url(https://i.ibb.co/ThkYKqf/magicpattern-mesh-gradient-1701196929702.png);
+  opacity: 1;
+  overflow: hidden;
 }
-
 .calculator {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
@@ -30,6 +31,7 @@ body {
   text-align: right;
   margin-bottom: 10px;
   font-weight: bold;
+  background-color: #ffffff;
 }
 
 .buttons {
@@ -42,7 +44,7 @@ button {
   padding: 10px;
   font-size: 18px;
   text-align: center;
-  background-color: #eee;
+  background-color: #eeeeee;
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
